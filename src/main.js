@@ -1,5 +1,3 @@
-// src/main.js
-
 // Importamos todos los estilos en el orden correcto
 import './css/reset.css';
 import './css/tokens.css';
