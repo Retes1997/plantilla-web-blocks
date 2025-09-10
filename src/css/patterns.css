@@ -1,0 +1,126 @@
+/* ===========================
+   Patterns
+   Layouts y estructuras comunes
+   =========================== */
+
+/* 📦 Secciones generales */
+.section {
+  padding-block: var(--space-xl);
+}
+.section-sm {
+  padding-block: var(--space-md);
+}
+.section-lg {
+  padding-block: var(--space-2xl);
+}
+
+/* 🏠 Hero section */
+.hero {
+  display: grid;
+  align-items: center;
+  gap: var(--space-lg);
+  padding-block: var(--space-2xl);
+}
+@media (min-width: var(--breakpoint-md)) {
+  .hero {
+    grid-template-columns: 1fr 1fr; /* imagen + texto */
+  }
+}
+
+/* 📑 Layout con sidebar izquierdo */
+.layout-sidebar {
+  display: grid;
+  gap: var(--space-lg);
+}
+@media (min-width: var(--breakpoint-lg)) {
+  .layout-sidebar {
+    grid-template-columns: 250px 1fr; /* sidebar + contenido */
+  }
+}
+
+/* 📑 Layout con sidebar derecho */
+.layout-sidebar-right {
+  display: grid;
+  gap: var(--space-lg);
+}
+@media (min-width: var(--breakpoint-lg)) {
+  .layout-sidebar-right {
+    grid-template-columns: 1fr 250px; /* contenido + sidebar */
+  }
+}
+
+/* 📰 Layout de blog (contenido principal + aside) */
+.layout-blog {
+  display: grid;
+  gap: var(--space-lg);
+}
+@media (min-width: var(--breakpoint-lg)) {
+  .layout-blog {
+    grid-template-columns: 2fr 1fr; /* main más ancho */
+  }
+}
+
+/* 📊 Grilla de tarjetas */
+.cards-grid {
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: 1fr;
+}
+@media (min-width: var(--breakpoint-md)) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: var(--breakpoint-lg)) {
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: var(--breakpoint-xl)) {
+  .cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* 📋 Listado responsivo en línea */
+.list-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+.list-inline > * {
+  background: var(--gray-100);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+}
+
+/* 📌 Sección con grid 2 columnas (ej: features) */
+.features-grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+@media (min-width: var(--breakpoint-md)) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: var(--breakpoint-lg)) {
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 🎯 Call to Action (CTA) centrado */
+.cta {
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+  background-color: var(--color-accent);
+  color: #fff;
+  border-radius: var(--radius-md);
+}
+.cta h2 {
+  margin-bottom: var(--space-sm);
+}
+.cta p {
+  margin-bottom: var(--space-md);
+}

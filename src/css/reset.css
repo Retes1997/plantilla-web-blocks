@@ -1,0 +1,74 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%; /* 16px base */
+  -webkit-text-size-adjust: 100%; /* evitar zoom raro en iOS */
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #222;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+/* Listas sin estilo base */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Imágenes y medios fluidos */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Inputs y botones coherentes */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* Botones sin estilos por defecto */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Tablas más limpias */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Quitar comillas de blockquote y q */
+blockquote,
+q {
+  quotes: none;
+}
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: '';
+  content: none;
+}

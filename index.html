@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo Design System</title>
+</head>
+<body>
+
+  <!-- =========================
+       Navbar
+  ========================== -->
+  <nav class="navbar">
+    <a href="#" class="navbar-brand">MiMarca</a>
+    <button class="navbar-toggle" onclick="document.querySelector('.navbar-menu').classList.toggle('open')">
+      ☰
+    </button>
+    <div class="navbar-menu">
+      <a href="#">Inicio</a>
+      <a href="#">Servicios</a>
+      <a href="#">Proyectos</a>
+      <a href="#">Contacto</a>
+    </div>
+  </nav>
+
+  <!-- =========================
+       Hero Section
+  ========================== -->
+  <section class="hero container">
+    <div>
+      <h1>Construye interfaces profesionales</h1>
+      <p>Un sistema de diseño modular con Vite + Vanilla JS.</p>
+      <button class="btn btn-accent btn-lg">Comenzar</button>
+    </div>
+    <div>
+      <img src="1.jpg" alt="Ejemplo Hero">
+    </div>
+  </section>
+
+  <main class="container mt-lg">
+
+    <!-- =========================
+         Botones
+    ========================== -->
+    <section>
+      <h2>Botones</h2>
+      <div class="d-flex gap-md flex-wrap">
+        <button class="btn btn-primary">Primario</button>
+        <button class="btn btn-secondary">Secundario</button>
+        <button class="btn btn-accent">Accent</button>
+        <button class="btn btn-outline">Outline</button>
+        <button class="btn btn-primary btn-sm">Pequeño</button>
+        <button class="btn btn-primary btn-lg">Grande</button>
+        <button class="btn btn-primary" disabled>Disabled</button>
+      </div>
+    </section>
+
+    <!-- =========================
+         Cards
+    ========================== -->
+    <section class="mt-lg">
+      <h2>Cards</h2>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-header">Card Header</div>
+          <div class="card-body">
+            <p>Este es el contenido principal de la card.</p>
+          </div>
+          <div class="card-footer">Footer con acciones</div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">Otra Card</div>
+          <div class="card-body">
+            <p>Más contenido dentro de otra card.</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-outline">Acción</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         Formularios
+    ========================== -->
+    <section class="mt-lg">
+      <h2>Formularios</h2>
+      <form>
+        <div class="mb-md">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" class="input" placeholder="Tu nombre" />
+        </div>
+
+        <div class="mb-md">
+          <label for="opciones">Opciones</label>
+          <select id="opciones" class="select">
+            <option value="">Selecciona...</option>
+            <option value="1">Opción 1</option>
+            <option value="2">Opción 2</option>
+          </select>
+        </div>
+
+        <div class="mb-md">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" class="textarea" placeholder="Escribe algo..."></textarea>
+        </div>
+
+        <div class="mb-md">
+          <label class="checkbox">
+            <input type="checkbox" /> Acepto términos y condiciones
+          </label>
+        </div>
+
+        <div class="mb-md">
+          <label class="radio">
+            <input type="radio" name="opcion" /> Opción A
+          </label>
+          <label class="radio">
+            <input type="radio" name="opcion" /> Opción B
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-accent">Enviar</button>
+      </form>
+    </section>
+
+    <!-- =========================
+         Listas
+    ========================== -->
+    <section class="mt-lg">
+      <h2>Listas</h2>
+      <ul>
+        <li>Elemento de lista con viñeta</li>
+        <li>Otro elemento</li>
+      </ul>
+      <ol>
+        <li>Paso uno</li>
+        <li>Paso dos</li>
+      </ol>
+    </section>
+
+    <!-- =========================
+         Tablas
+    ========================== -->
+    <section class="mt-lg">
+      <h2>Tablas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Rol</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ana</td>
+            <td>ana@mail.com</td>
+            <td>Admin</td>
+          </tr>
+          <tr>
+            <td>Carlos</td>
+            <td>carlos@mail.com</td>
+            <td>Editor</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- =========================
+         Blockquote
+    ========================== -->
+    <section class="mt-lg">
+      <h2>Blockquote</h2>
+      <blockquote>
+        "El diseño no es solo lo que se ve o se siente, es cómo funciona." – Steve Jobs
+      </blockquote>
+    </section>
+
+    <!-- =========================
+         Utilities
+    ========================== -->
+    <section class="mt-lg">
+      <h2>Utilities en acción</h2>
+      <div class="d-flex justify-between align-center bg-light p-md">
+        <span class="text-muted">Caja flex con justify-between</span>
+        <button class="btn btn-outline">Acción</button>
+      </div>
+
+      <div class="d-grid grid-3 gap-md mt-md">
+        <div class="bg-info p-md text-center text-light">1</div>
+        <div class="bg-success p-md text-center text-light">2</div>
+        <div class="bg-warning p-md text-center">3</div>
+      </div>
+    </section>
+
+    <!-- =========================
+         Layouts
+    ========================== -->
+    <section class="mt-lg">
+      <h2>Layout con sidebar</h2>
+      <div class="layout-sidebar">
+        <aside class="bg-light p-md">Sidebar</aside>
+        <div class="bg-info p-md text-light">Contenido principal</div>
+      </div>
+    </section>
+
+    <section class="mt-lg">
+      <h2>Layout de blog</h2>
+      <div class="layout-blog">
+        <article class="bg-light p-md">
+          <h3>Post principal</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+        <aside class="bg-secondary p-md text-light">Aside con widgets</aside>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================
+       Footer
+  ========================== -->
+  <footer class="bg-dark p-md text-center">
+    <p class="text-light">© 2025 MiMarca – Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Entrada principal de Vite -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

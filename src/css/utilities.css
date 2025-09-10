@@ -1,0 +1,118 @@
+/* ===========================
+   Utilities
+   Clases atómicas y helpers
+   =========================== */
+
+/* 🎭 Display */
+.d-block { display: block; }
+.d-inline { display: inline; }
+.d-inline-block { display: inline-block; }
+.d-flex { display: flex; }
+.d-grid { display: grid; }
+.d-none { display: none !important; }
+
+/* 📐 Flexbox helpers */
+.flex-row { flex-direction: row; }
+.flex-col { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.justify-start { justify-content: flex-start; }
+.justify-center { justify-content: center; }
+.justify-end { justify-content: flex-end; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+.align-start { align-items: flex-start; }
+.align-center { align-items: center; }
+.align-end { align-items: flex-end; }
+
+/* 📊 Grid helpers */
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+.gap-xs { gap: var(--space-xs); }
+.gap-sm { gap: var(--space-sm); }
+.gap-md { gap: var(--space-md); }
+.gap-lg { gap: var(--space-lg); }
+.gap-xl { gap: var(--space-xl); }
+
+/* 🔤 Texto */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+.text-uppercase { text-transform: uppercase; }
+.text-lowercase { text-transform: lowercase; }
+.text-capitalize { text-transform: capitalize; }
+
+.font-light { font-weight: var(--font-weight-light); }
+.font-normal { font-weight: var(--font-weight-normal); }
+.font-medium { font-weight: var(--font-weight-medium); }
+.font-semibold { font-weight: var(--font-weight-semibold); }
+.font-bold { font-weight: var(--font-weight-bold); }
+
+/* 🔎 Overflow & visibilidad */
+.overflow-hidden { overflow: hidden; }
+.overflow-auto { overflow: auto; }
+.visible { visibility: visible; }
+.invisible { visibility: hidden; }
+
+/* 📏 Espaciados extra */
+.w-full { width: 100%; }
+.h-full { height: 100%; }
+.max-w-full { max-width: 100%; }
+
+/* 🎬 Transiciones rápidas */
+.transition { transition: all var(--transition-base); }
+.transition-fast { transition: all var(--transition-fast); }
+.transition-slow { transition: all var(--transition-slow); }
+
+/* 🖼️ Posicionamiento */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.sticky { position: sticky; }
+
+/* 🧭 Posición rápida */
+.top-0 { top: 0; }
+.right-0 { right: 0; }
+.bottom-0 { bottom: 0; }
+.left-0 { left: 0; }
+
+/* ===========================
+   📱 Helpers responsivos
+   usando breakpoints de tokens
+   =========================== */
+
+/* 📱 Ocultar en ciertos breakpoints */
+@media (max-width: var(--breakpoint-sm)) {
+  .hidden-sm { display: none !important; }
+}
+@media (min-width: var(--breakpoint-md)) {
+  .hidden-md { display: none !important; }
+}
+@media (min-width: var(--breakpoint-lg)) {
+  .hidden-lg { display: none !important; }
+}
+@media (min-width: var(--breakpoint-xl)) {
+  .hidden-xl { display: none !important; }
+}
+
+/* 📱 Text alignment responsive */
+@media (min-width: var(--breakpoint-md)) {
+  .text-md-center { text-align: center; }
+  .text-md-right { text-align: right; }
+}
+@media (min-width: var(--breakpoint-lg)) {
+  .text-lg-center { text-align: center; }
+  .text-lg-right { text-align: right; }
+}
+
+/* 📱 Flex/grid responsive */
+@media (min-width: var(--breakpoint-md)) {
+  .flex-md-row { flex-direction: row; }
+  .flex-md-col { flex-direction: column; }
+  .grid-md-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-md-3 { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: var(--breakpoint-lg)) {
+  .grid-lg-4 { grid-template-columns: repeat(4, 1fr); }
+}
